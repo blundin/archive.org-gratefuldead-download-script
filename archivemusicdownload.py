@@ -67,7 +67,7 @@ def download(url):
 		link = link.split('/')[-1]
 		link_metadata = metadata[link]
 		archive_download_url = metadata['download_base']+link
-		local_filename = link_metadata['local_filename']
+		local_filename = link_metadata['local_filename']+".mp3"
 		if resume and local_filename in downloaded_files: continue
 		local_download_name = '{0}/{1}'.format(local_download_dir, local_filename)
 		print "[..] Downloading {0} ({1}/{2})...".format(local_filename, i, file_count)
